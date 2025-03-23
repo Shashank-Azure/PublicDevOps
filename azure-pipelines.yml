@@ -65,6 +65,7 @@ stages:
               provider: 'azurerm'
               command: 'plan'
               environmentServiceNameAzureRM: 'Pay as you go-Subscription(e5b9c9ca-9260-4003-886c-fa7ab3b5fb9a)'
+              workingDirectory: 'Azure DevOps and Terraform Pipelines/Terraform'
           - task: TerraformTaskV4@4
             displayName: apply
             inputs:
