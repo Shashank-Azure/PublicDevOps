@@ -59,12 +59,6 @@ stages:
               backendAzureRmStorageAccountName: '$(bkstrg)'
               backendAzureRmContainerName: '$(bkcontainer)'
               backendAzureRmKey: '$(bkstrgkey)'
-          - task: CopyFiles@2
-            displayName: 'Copy Terraform files'
-            inputs:
-              SourceFolder: 'Azure DevOps and Terraform Pipelines'
-              Contents: '**'
-              TargetFolder: '$(System.DefaultWorkingDirectory)'
           - task: TerraformTaskV4@4
             displayName: plan
             inputs:
