@@ -24,7 +24,7 @@ stages:
             displayName: tfinstall
             inputs:
               terraformVersion: 'latest'
-          - task: TerraformTaskV3@3
+          - task: TerraformTaskV4@4  # Updated to V4
             displayName: init
             inputs:
               provider: 'azurerm'
@@ -34,7 +34,7 @@ stages:
               backendAzureRmStorageAccountName: '$(bkstrg)'
               backendAzureRmContainerName: '$(bkcontainer)'
               backendAzureRmKey: '$(bkstrgkey)'
-          - task: TerraformTaskV3@3
+          - task: TerraformTaskV4@4  # Updated to V4
             displayName: validate
             inputs:
               provider: 'azurerm'
@@ -49,7 +49,7 @@ stages:
             displayName: tfinstall
             inputs:
               terraformVersion: 'latest'
-          - task: TerraformTaskV3@3
+          - task: TerraformTaskV4@4  # Updated to V4
             displayName: init
             inputs:
               provider: 'azurerm'
@@ -59,7 +59,7 @@ stages:
               backendAzureRmStorageAccountName: '$(bkstrg)'
               backendAzureRmContainerName: '$(bkcontainer)'
               backendAzureRmKey: '$(bkstrgkey)'
-          - task: CopyFiles@2  # Copy Terraform files to default working directory
+          - task: CopyFiles@2
             displayName: 'Copy Terraform files'
             inputs:
               SourceFolder: 'Azure DevOps and Terraform Pipelines'
