@@ -62,7 +62,7 @@ stages:
           - task: CopyFiles@2  # Copy Terraform files to default working directory
             displayName: 'Copy Terraform files'
             inputs:
-              SourceFolder: 'Azure DevOps and Terraform Pipelines/Terraform'
+              SourceFolder: 'Azure DevOps and Terraform Pipelines'
               Contents: '**'
               TargetFolder: '$(System.DefaultWorkingDirectory)'
           - task: TerraformTaskV4@4
